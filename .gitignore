@@ -1,4 +1,7 @@
 ~*
+tmp/
+downloads/
+slug.tgz
 wasmception
 app/clang/
 app/sysroot/
