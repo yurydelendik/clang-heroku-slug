@@ -82,7 +82,7 @@ function get_clang_options(options) {
 
 
 function get_lld_options(options) {
-  const clang_flags = `--target=wasm32-unknown-unknown-wasm --sysroot=${sysroot} -nostartfiles ${sysroot}/lib/wasmception.wasm -D__WASM32__ -Wl,--allow-undefined`;
+  const clang_flags = `--target=wasm32-unknown-unknown-wasm --sysroot=${sysroot} -nostartfiles -Wl,--allow-undefined,--no-entry,--no-threads`;
   if (!options) {
     return clang_flags;
   }
