@@ -60,7 +60,7 @@ function shell_exec(cmd, cwd = tempDir) {
 }
 
 function get_clang_options(options) {
-  const clang_flags = `--target=wasm32-unknown-unknown-wasm --sysroot=${sysroot} -fdiagnostics-print-source-range-info`;
+  const clang_flags = `--target=wasm32-unknown-unknown-wasm --sysroot=${sysroot} -fdiagnostics-print-source-range-info -fno-exceptions`;
   if (!options) {
     return clang_flags;
   }
